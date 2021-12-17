@@ -26,6 +26,10 @@ Required only if you use service account authentication.
 
 **Required** Artifact to upload (.apk, .aab or .ipa)
 
+### `testers`
+
+Distribution emails
+
 ### `groups`
 
 Distribution groups
