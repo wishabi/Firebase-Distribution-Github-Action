@@ -17,9 +17,6 @@ inputs:
   file:
     description: 'Artifact to upload (.apk or .ipa)'
     required: true
-  testers:
-    description: 'Distribution emails'
-    required: false
   groups:
     description: 'Distribution groups'
     required: false
