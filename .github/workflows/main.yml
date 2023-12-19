@@ -13,7 +13,7 @@ jobs:
         uses: ./
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: Testers
           file: ApiDemos-debug.apk
       - name: Assert outputs of previous step are not empty
@@ -37,7 +37,7 @@ jobs:
         uses: ./
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: Testers
           releaseNotesFile: README.md
           file: ApiDemos-debug.apk
@@ -45,7 +45,7 @@ jobs:
         uses: ./
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           groups: Testers
           releaseNotesFile: README.md
           file: ApiDemos-debug.apk
@@ -80,7 +80,7 @@ jobs:
         uses: ./
         with:
           appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           testers: "test@test.com, test2@test2.com"
           releaseNotesFile: README.md
           file: ApiDemos-debug.apk
@@ -90,7 +90,7 @@ jobs:
         continue-on-error: true
         with:
           appId: invalid_app_id
-          token: ${{secrets.FIREBASE_TOKEN}}
+          serviceCredentialsFileContent: ${{ secrets.CREDENTIAL_FILE_CONTENT }}
           testers: "test@test.com, test2@test2.com"
           releaseNotesFile: README.md
           file: ApiDemos-debug.apk
